@@ -1,8 +1,5 @@
 # Dynamic Combo Meal Generator
 
-![Combo Meal Generator Screenshot Placeholder](https://via.placeholder.com/800x400?text=Screenshot+of+Combo+Generator)
-*Replace this placeholder image link with an actual screenshot of your running application for a better visual representation!*
-
 This project is a web-based application designed to dynamically generate daily combo meal recommendations for a restaurant. Built with a Node.js/Express.js backend and a pure HTML, CSS, and JavaScript frontend, it provides flexible meal planning solutions with intelligent constraints.
 
 ---
