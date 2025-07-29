@@ -1,0 +1,22 @@
+{
+  "name": "combo-meal-generator",
+  "version": "1.0.0",
+  "description": "A dynamic combo meal recommendation system for a restaurant.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Node.js",
+    "Express.js",
+    "Recommendation System",
+    "Hackathon"
+  ],
+  "author": "Krittika Das",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5"
+  }
+}

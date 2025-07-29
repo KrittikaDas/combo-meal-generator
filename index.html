@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combo Meal Generator</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+    <div class="container">
+        <h1>Dynamic Combo Meal Generator</h1>
+
+        <div class="day-selector">
+            <label for="daySelect">Start Day for Forecast:</label>
+            <select id="daySelect">
+                <option value="monday">Monday</option>
+                <option value="tuesday">Tuesday</option>
+                <option value="wednesday">Wednesday</option>
+                <option value="thursday">Thursday</option>
+                <option value="friday">Friday</option>
+                <option value="saturday">Saturday</option>
+                <option value="sunday">Sunday</option>
+            </select>
+            <button id="generate3DayBtn">Generate 3-Day Forecast</button> <button id="generateWeekBtn" class="secondary-btn">Show Full Week Plan</button> </div>
+
+        <div id="comboOutput" class="combo-output">
+            <p class="placeholder-text">Select a start day and click "Generate 3-Day Forecast" or "Show Full Week Plan" to see recommendations.</p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; Krittika Das | Hackathon Project</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script> </body>
+</html>

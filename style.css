@@ -1,0 +1,265 @@
+/* style.css */
+
+/* Basic Reset & Font */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6; /* Light background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top */
+    min-height: 100vh; /* Full viewport height */
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 50px; /* Space from top */
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    font-weight: 600;
+}
+
+/* Day Selector Styling */
+.day-selector {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.day-selector label {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.day-selector select,
+.day-selector button {
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.day-selector select {
+    border: 1px solid #dcdcdc;
+    background-color: #f9f9f9;
+    min-width: 150px;
+}
+
+.day-selector select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.day-selector button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.day-selector button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* New style for the full week button */
+.day-selector .secondary-btn {
+    background-color: #6c757d; /* A subtle grey */
+    color: white;
+    border: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-left: 10px; /* Space it out from the primary button */
+}
+
+.day-selector .secondary-btn:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(108, 117, 125, 0.3);
+}
+
+/* Combo Output Area */
+/* This is the main container for all day sections */
+.combo-output {
+    display: flex;
+    flex-direction: column; /* Stack day sections vertically */
+    gap: 30px; /* Space between different day sections */
+    margin-top: 20px;
+}
+
+.placeholder-text {
+    font-style: italic;
+    color: #666;
+    font-size: 1.1em;
+    margin-top: 50px;
+}
+
+/* Styling for each individual day section */
+.day-section {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.day-section h2 {
+    color: #444;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* Grid for combos *within* each day section */
+.combos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid for combos */
+    gap: 25px; /* Space between combo cards */
+    justify-content: center; /* Center items in the grid */
+}
+
+/* ENHANCED STYLING FOR .combo-card */
+.combo-card {
+    background-color: #ffffff; /* Brighter background */
+    border: 1px solid #cceeff; /* Lighter blue border */
+    border-radius: 12px; /* Slightly more rounded corners */
+    padding: 25px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+    width: 100%;
+    max-width: none;
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.combo-card:hover {
+    transform: translateY(-7px); /* Lift a bit more on hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+    border-color: #007bff; /* Highlight border on hover */
+}
+
+.combo-card h3 {
+    color: #007bff;
+    font-size: 1.4em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 10px;
+}
+
+.combo-card p {
+    margin: 8px 0;
+    line-height: 1.5;
+    font-size: 0.95em;
+}
+
+.combo-card p strong {
+    color: #555;
+    min-width: 80px; /* Align labels */
+    display: inline-block;
+}
+
+.combo-card .remarks {
+    font-style: italic;
+    color: #6a6a6a;
+    font-size: 0.85em;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed #e0e0e0;
+}
+
+/* Loader Styling */
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #007bff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 50px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Footer */
+.footer {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    color: #888;
+    font-size: 0.9em;
+}
+
+/* Specific styling for error messages */
+.placeholder-text.error-message {
+    color: #d9534f; /* Red color for errors */
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 25px;
+        margin-top: 20px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    .combos-grid {
+        grid-template-columns: 1fr; /* Stack combo cards vertically on small screens */
+        justify-content: center;
+        align-items: center;
+    }
+    .combo-card {
+        max-width: 350px; /* Give single column cards a max-width */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    .container {
+        padding: 20px;
+    }
+    .day-selector {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .day-selector select,
+    .day-selector button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

@@ -1,0 +1,40 @@
+/* Add these new rules to style.css */
+
+.day-section {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px; /* Space between day sections */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    width: 100%; /* Take full width of container */
+    box-sizing: border-box;
+}
+
+.day-section h2 {
+    color: #444;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.combos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid for combos */
+    gap: 25px;
+    justify-content: center; /* Center items in the grid */
+}
+
+/* Specific styling for error messages */
+.placeholder-text.error-message {
+    color: #d9534f; /* Red color for errors */
+    font-weight: bold;
+}
+
+/* Ensure combo-card max-width fits better in grid */
+.combo-card {
+    max-width: none; /* Let grid handle width */
+}
